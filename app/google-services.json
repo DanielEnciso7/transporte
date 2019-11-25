@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "966978922693",
+    "firebase_url": "https://transportedulces.firebaseio.com",
+    "project_id": "transportedulces",
+    "storage_bucket": "transportedulces.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966978922693:android:88d9e5dcea9f9c9a87e8ac",
+        "android_client_info": {
+          "package_name": "com.example.transporte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966978922693-33ne2lvlmhjviqlagrt3ifflhks5v2ij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.transporte",
+            "certificate_hash": "2e2c994bb6e5a29ca587596deee6f0260dfc0849"
+          }
+        },
+        {
+          "client_id": "966978922693-18033t25amham221te8igma7tqd42di7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN9XZ9LXA2xznP5vmwezrdpSu8GLM9alU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966978922693-18033t25amham221te8igma7tqd42di7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
