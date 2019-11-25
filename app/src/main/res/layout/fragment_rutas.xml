@@ -21,7 +21,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="-10dp">
 
                 <LinearLayout
                     android:layout_width="156dp"
@@ -128,7 +131,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="-10dp">
 
                 <LinearLayout
                     android:layout_width="156dp"
@@ -337,14 +343,6 @@
 
 
             </LinearLayout>
-
-            <Button
-                android:id="@+id/boton"
-                android:textSize="20dp"
-                android:text="Hola"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></Button>
-
 
         </LinearLayout>
 
