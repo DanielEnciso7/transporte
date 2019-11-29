@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".RegistroActivity">
+
+        <EditText
+            android:id="@+id/txtNombreCompleto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:paddingTop="20dp"
+            android:inputType="textPersonName"
+            android:hint="Nombre Completo"
+        />
+
+        <EditText
+            android:id="@+id/txtSexo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:paddingTop="20dp"
+            android:inputType="text"
+            android:layout_margin="20dp"
+            android:hint="Sexo"
+            />
+
+        <EditText
+            android:id="@+id/txtEdad"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:layout_margin="20dp"
+            android:paddingTop="20dp"
+            android:inputType="number"
+            android:hint="Edad"
+            />
+
+        <EditText
+            android:id="@+id/txtEmail2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Ingrese un email"
+            android:inputType="textEmailAddress"
+            android:layout_margin="20dp"
+            android:layout_centerInParent="true"/>
+
+        <EditText
+            android:id="@+id/txtPassword2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Ingrese una contraseña"
+            android:layout_below="@id/txtEmail"
+            android:layout_margin="20dp"
+            android:layout_centerInParent="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_descuento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Tengo descuento de estudiate o de tercera edad"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="20dp"
+            android:text="REGISTRARSE" />
+
+</LinearLayout>
