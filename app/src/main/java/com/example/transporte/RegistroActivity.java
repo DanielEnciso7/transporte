@@ -2,6 +2,7 @@ package com.example.transporte;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -24,14 +25,14 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistroActivity extends AppCompatActivity implements View.OnClickListener
 {
-    private EditText TextEmail2;
-    private EditText TextPassword2;
-    private EditText TextNombre;
-    private EditText TextSexo;
-    private EditText TextEdad;
-    private RadioButton RadioDescuento;
-    private Button BotonRegister;
-    private ProgressDialog progressDialog;
+    public EditText TextEmail2;
+    public EditText TextPassword2;
+    public EditText TextNombre;
+    public EditText TextSexo;
+    public EditText TextEdad;
+    public RadioButton RadioDescuento;
+    public Button BotonRegister;
+    public ProgressDialog progressDialog;
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference Users;
@@ -47,25 +48,25 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
 
-        TextNombre = (EditText) findViewById(R.id.txtNombreCompleto);
+
+
+        TextNombre = findViewById(R.id.txtNombreCompleto);
         TextEdad = (EditText) findViewById(R.id.txtEdad);
         TextSexo = (EditText) findViewById(R.id.txtSexo);
-        TextEmail2 = (EditText) findViewById(R.id.txtEmail);
-        TextPassword2 = (EditText) findViewById(R.id.txtPassword);
+        TextEmail2 = (EditText) findViewById(R.id.txtEmail2);
+        TextPassword2 = (EditText) findViewById(R.id.txtPassword2);
         RadioDescuento = (RadioButton) findViewById(R.id.rb_descuento);
 
         BotonRegister = (Button) findViewById(R.id.btnRegister);
 
-        BotonRegister.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
+        BotonRegister.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 registrarUsuario();
             }
         });
 
     }
+
 
     private void registrarUsuario()
     {
@@ -77,7 +78,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         String sexo  = TextSexo.getText().toString().trim();
         String descuento = RadioDescuento.getText().toString().trim();
 
-        Toast.makeText(getApplicationContext(),TextEmail2.getText(),Toast.LENGTH_LONG).show();
+
 
         //Verificamos que las cajas de texto no esten vacías
         if(TextUtils.isEmpty(email))
