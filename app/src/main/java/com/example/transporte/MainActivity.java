@@ -1,6 +1,7 @@
 package com.example.transporte;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView.setSelectedItemId(R.id.rutas);
 
         txtUser=(TextView)findViewById(R.id.txtEmail);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setTitle("Transportes UTD (Concept)");
     }
 
     rutas rutaFragment= new rutas();

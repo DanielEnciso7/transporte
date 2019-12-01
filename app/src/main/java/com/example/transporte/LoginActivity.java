@@ -1,6 +1,7 @@
 package com.example.transporte;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -52,6 +53,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //attaching listener to button
         btnRegistrar.setOnClickListener(this);
         btnLogin.setOnClickListener(this);
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.hide();
     }
 
     private void loguearUsuario()
@@ -72,7 +76,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
-        progressDialog.setMessage("Realizando consulta en linea...");
+        progressDialog.setMessage("Verificando...");
         progressDialog.show();
 
         //consultar el usuario
@@ -85,7 +89,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         //verificación
                         if(task.isSuccessful())
                         {
-                            Toast.makeText(LoginActivity.this,"Bienvenido: "+ TextEmail.getText(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this,"Bienvenido Daniel Sebastian",Toast.LENGTH_LONG).show();
                             Intent principal = new Intent(getApplication(), MainActivity.class);
                             principal.putExtra(MainActivity.user, email);
                             startActivity(principal);

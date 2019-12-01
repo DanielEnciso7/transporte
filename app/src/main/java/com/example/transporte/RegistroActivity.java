@@ -1,6 +1,7 @@
 package com.example.transporte;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -64,6 +65,9 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                 registrarUsuario();
             }
         });
+
+        ActionBar actionBar= getSupportActionBar();
+        actionBar.setTitle("Registro");
 
     }
 

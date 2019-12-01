@@ -23,7 +23,7 @@ public class Rutas_activity_verde extends AppCompatActivity {
         setContentView(R.layout.activity_ruta_verde);
 
         ActionBar actionBar= getSupportActionBar();
-        actionBar.setTitle("Post List");
+        actionBar.setTitle("Ruta Verde");
 
         mRecyclerView=findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);

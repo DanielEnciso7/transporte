@@ -26,7 +26,7 @@ public class Rutas_activity_azul extends AppCompatActivity {
         setContentView(R.layout.activity_ruta_azul);
 
         ActionBar actionBar= getSupportActionBar();
-        actionBar.setTitle("Post List");
+        actionBar.setTitle("Ruta Azul");
 
         mRecyclerView=findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
