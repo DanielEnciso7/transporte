@@ -39,8 +39,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></TextView>
 
-
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/Tvcoordenada1"
+        android:text="Linea de descripcion"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"></TextView>
+
+    <TextView
+        android:id="@+id/Tvcoordenada2"
+        android:text="Linea de descripcion"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"></TextView>
+
+    <TextView
+        android:id="@+id/Tvcoordenada3"
+        android:text="Linea de descripcion"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"></TextView>
+
+    <TextView
+        android:id="@+id/Tvcoordenada4"
+        android:text="Linea de descripcion"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"></TextView>
 
 </androidx.cardview.widget.CardView>

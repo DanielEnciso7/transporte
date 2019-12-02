@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     rutas rutaFragment= new rutas();
     ruta_gps ruta_gpsFragment= new ruta_gps();
     comentarios comentariosFragment= new comentarios();
+    Firebase_rutas firebase_rutas= new Firebase_rutas();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
