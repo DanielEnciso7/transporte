@@ -10,17 +10,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class rutas extends Fragment implements View.OnClickListener{
+public class layout_rutas extends Fragment implements View.OnClickListener{
 
 
-    public rutas() {
+    public layout_rutas() {
         // Required empty public constructor
     }
 
@@ -46,14 +44,14 @@ public class rutas extends Fragment implements View.OnClickListener{
         switch (v.getId()) {
             case R.id.cardViewAzul:
 
-                Intent intent1 = new Intent(getActivity(), Rutas_activity_azul.class);
+                Intent intent1 = new Intent(getActivity(), fragment_ruta_azul.class);
                 startActivity(intent1);
 
                 break;
 
             case R.id.cardViewVerde:
 
-                Intent intent2 = new Intent(getActivity(), Rutas_activity_verde.class);
+                Intent intent2 = new Intent(getActivity(), fragment_ruta_verde.class);
                 startActivity(intent2);
 
                 break;

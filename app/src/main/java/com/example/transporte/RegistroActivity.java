@@ -3,7 +3,6 @@ package com.example.transporte;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
@@ -44,7 +42,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        Users = FirebaseDatabase.getInstance().getReference("Users");
+        Users = FirebaseDatabase.getInstance().getReference("model_usuarios");
 
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
@@ -117,7 +115,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         else
         {
             String id = Users.push().getKey();
-            Users user = new Users(id, nom, edad, sexo, descuento);
+            model_usuarios user = new model_usuarios(id, nom, edad, sexo, descuento);
             Users.child("Usuarios").child(id).setValue(user);
         }
 

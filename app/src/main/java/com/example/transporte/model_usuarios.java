@@ -1,6 +1,6 @@
 package com.example.transporte;
 
-public class Users
+public class model_usuarios
 {
     String id;
     String nombre;
@@ -8,7 +8,7 @@ public class Users
     String sexo;
     String desc;
 
-    public Users(String id, String nombre, String edad, String sexo, String desc) {
+    public model_usuarios(String id, String nombre, String edad, String sexo, String desc) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;

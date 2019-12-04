@@ -1,14 +1,11 @@
 package com.example.transporte;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 
 import com.example.transporte.directionhelpers.FetchURL;
 import com.example.transporte.directionhelpers.TaskLoadedCallback;
@@ -21,7 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-public class Firebase_rutas extends AppCompatActivity implements OnMapReadyCallback, TaskLoadedCallback {
+public class firebase_mapas extends AppCompatActivity implements OnMapReadyCallback, TaskLoadedCallback {
 
     Button ButtonGetDirection;
     GoogleMap map;
@@ -53,7 +50,7 @@ public class Firebase_rutas extends AppCompatActivity implements OnMapReadyCallb
         double cord3 = Double.parseDouble(coordenada3);
         double cord4 = Double.parseDouble(coordenada4);
 
-        ButtonGetDirection=findViewById(R.id.boton_direccion);
+
         MapFragment mapFragment= (MapFragment) getFragmentManager().findFragmentById(R.id.mapFrag);
         mapFragment.getMapAsync(this);
 
@@ -62,16 +59,10 @@ public class Firebase_rutas extends AppCompatActivity implements OnMapReadyCallb
         lugar2= new MarkerOptions().position(new LatLng(cord3, cord4)).title("Locación 2");
 
 
+        String url = getUrl(lugar1.getPosition(), lugar2.getPosition(), "driving");
+        new FetchURL(firebase_mapas.this).execute(url, "driving");
 
-        ButtonGetDirection.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                String url = getUrl(lugar1.getPosition(), lugar2.getPosition(), "driving");
-                new FetchURL(Firebase_rutas.this).execute(url, "driving");
-
-            }
-        });
 
     }
 
@@ -88,7 +79,7 @@ public class Firebase_rutas extends AppCompatActivity implements OnMapReadyCallb
         map.addMarker(lugar1);
         map.addMarker(lugar2);
 
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng1, 15), 100, null);
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(lugar1.getPosition(), 14), 100, null);
 
     }
 

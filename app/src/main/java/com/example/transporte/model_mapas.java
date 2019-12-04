@@ -1,6 +1,6 @@
 package com.example.transporte;
 
-public class Model
+public class model_mapas
 {
     String titulo;
     String imagen;
@@ -10,7 +10,7 @@ public class Model
     String cordenada3;
     String cordenada4;
 
-    public Model()
+    public model_mapas()
     {
 
     }
